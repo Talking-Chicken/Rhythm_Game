@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1256202815	Play			\Default Work Unit\Play	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	810316031	Drum	F:\NYU homework\Music And Gameplay\Rhythm_Game\Rhythm_Game_WwiseProject\.cache\Windows\SFX\Drum 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Drum		96084
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1F3E7601-EE46-4419-9A9F-3CCA725E9801}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{1F3E7601-EE46-4419-9A9F-3CCA725E9801}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Drum" ID="{4EF7A17E-637F-41E6-B0B8-61E83D69D1BF}" ShortID="792863770">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FFEEE8F0-40E3-47DF-9379-556C06BF447B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29C6C42D-6FA9-4111-988F-410867F8BE69}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Drum 1" ID="{29629102-991F-49B1-85FD-2D84A2A4FB89}">
+							<Language>SFX</Language>
+							<AudioFile>Drum 1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="810316031"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Drum 1" ID="{29629102-991F-49B1-85FD-2D84A2A4FB89}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
