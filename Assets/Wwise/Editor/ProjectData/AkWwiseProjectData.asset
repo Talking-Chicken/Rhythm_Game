@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e261fca392fe6c439e32e0cae9bedb4a
     GuidInternal: 
-    m_lastTime: -8585233824308867844
+    m_lastTime: -8585232237318081018
     List:
     - name: Main_Soundbank
       guid: 7eb72ca04169ef4baad57ab21f01ce08
@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f9f0b9c13fa18348b12048162d7d6419
     GuidInternal: 
-    m_lastTime: -8585233824308857839
+    m_lastTime: -8585232231346513748
     List:
+    - name: Music
+      guid: eb31d3cbd5d60841bdd0e0958303f61c
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f9f0b9c13fa18348b12048162d7d6419
+      - ElementName: Music
+        ObjectType: 3
+        guid: eb31d3cbd5d60841bdd0e0958303f61c
+      Path: Events\Default Work Unit\Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play
       guid: 38ece749c2be8948a587a2584889df9e
       id: 1256202815
@@ -170,7 +187,7 @@ MonoBehaviour:
     m_lastTime: -8585233850837626594
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0100000005000000060000000a0000000b000000
+  ExpandedWaapiItemIds: 0100000005000000060000000a0000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
