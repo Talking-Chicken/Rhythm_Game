@@ -128,7 +128,7 @@ MonoBehaviour:
   perfectWindow: 50
   goodWindow: 120
   okayWindow: 250
-  destination: {x: -6, y: 0}
+  destination: {x: -5, y: 0}
   startPosition: {x: -9, y: 0}
 --- !u!50 &568515392984667419
 Rigidbody2D:

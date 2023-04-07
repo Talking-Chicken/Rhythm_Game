@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e261fca392fe6c439e32e0cae9bedb4a
     GuidInternal: 
-    m_lastTime: -8585232237318081018
+    m_lastTime: -8585207607755159067
     List:
     - name: Main_Soundbank
       guid: 7eb72ca04169ef4baad57ab21f01ce08
@@ -94,25 +94,8 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f9f0b9c13fa18348b12048162d7d6419
     GuidInternal: 
-    m_lastTime: -8585232231346513748
+    m_lastTime: -8585207607940807902
     List:
-    - name: Music
-      guid: eb31d3cbd5d60841bdd0e0958303f61c
-      id: 3991942870
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: f9f0b9c13fa18348b12048162d7d6419
-      - ElementName: Music
-        ObjectType: 3
-        guid: eb31d3cbd5d60841bdd0e0958303f61c
-      Path: Events\Default Work Unit\Music
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Play
       guid: 38ece749c2be8948a587a2584889df9e
       id: 1256202815
@@ -127,6 +110,40 @@ MonoBehaviour:
         ObjectType: 3
         guid: 38ece749c2be8948a587a2584889df9e
       Path: Events\Default Work Unit\Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_01
+      guid: 51a1f4f00be9b84789fa348e14127507
+      id: 3168847875
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f9f0b9c13fa18348b12048162d7d6419
+      - ElementName: Play_01
+        ObjectType: 3
+        guid: 51a1f4f00be9b84789fa348e14127507
+      Path: Events\Default Work Unit\Play_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Jazz
+      guid: cad9a0a0bc717745b0975d7f3c250096
+      id: 3474269109
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f9f0b9c13fa18348b12048162d7d6419
+      - ElementName: Play_Jazz
+        ObjectType: 3
+        guid: cad9a0a0bc717745b0975d7f3c250096
+      Path: Events\Default Work Unit\Play_Jazz
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1

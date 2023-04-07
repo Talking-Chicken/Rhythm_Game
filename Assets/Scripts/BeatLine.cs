@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*this class generate note when pressing the corresponding key*/
 public class BeatLine : MonoBehaviour
 {
     AudioManager audioManager;
@@ -10,13 +11,17 @@ public class BeatLine : MonoBehaviour
     [SerializeField] int goodWindow = 250;
     [SerializeField] int okayWindow = 500;
     float movementTime = 1.0f; //这定义根本没用
+    Vector3 movementSpeed = Vector3.zero;
+    bool hasSetMovementSpeed = false;
     int targetTime;
     [SerializeField] Vector2 destination;
     [SerializeField] private Vector2 startPosition;
     private bool isCheckingInput = false;
+    private bool isMakingNote = false;
     private SpriteRenderer noteSprite;
 
     public bool IsCheckingInput {get=>isCheckingInput;set=>isCheckingInput=value;}
+    public bool IsMakingNote {get=>isMakingNote; set=>isMakingNote=value;}
     void Start()
     {
         startPosition = transform.position;
@@ -43,11 +48,20 @@ public class BeatLine : MonoBehaviour
     IEnumerator MoveNoteRoutine() {
         float t = 0.0f;
         while (t < movementTime) {
-            transform.position = Vector2.Lerp(startPosition, destination, t / movementTime);
+            Vector3 deltaPosition = Vector3.Lerp(startPosition, destination, t / movementTime) - transform.position;
+            if (!hasSetMovementSpeed && t != 0.0f) {
+                hasSetMovementSpeed = true;
+                movementSpeed = deltaPosition;
+            }
+            transform.position += deltaPosition;
             t += Time.deltaTime;
             yield return null;
         }
-        yield return new WaitForSeconds(0.1f);
+
+        if (IsMakingNote) {
+            audioManager.CreateCircleNote(audioManager.MusicInfo);
+        }
+
         if (IsCheckingInput) {
             IsCheckingInput = false;
             FadeOut(HitOrMiss.Miss);
@@ -56,7 +70,7 @@ public class BeatLine : MonoBehaviour
 
     void CheckInput() {
 
-        foreach (KeyCode kcode in System.Enum.GetValues(typeof(KeyCode))) {
+        // foreach (KeyCode kcode in System.Enum.GetValues(typeof(KeyCode))) {
             if (Input.GetKeyDown(KeyCode.A)) {
                 HitOrMiss hm = HitOrMiss.Miss;
 
@@ -64,18 +78,22 @@ public class BeatLine : MonoBehaviour
                 int offBy = targetTime - currentTime;
 
                 if (offBy >= 0) {
-                    audioManager.IsMakingNote = true;
-                    if (offBy <= perfectWindow)
+                    if (offBy <= perfectWindow) {
+                        IsMakingNote = true;
                         hm = HitOrMiss.Perfect;
-                    else if (offBy <= goodWindow)
+                        GameManager.Instance.Score += 5;
+                    } else if (offBy <= goodWindow) {
+                        IsMakingNote = true;
                         hm = HitOrMiss.Good;
-                    else
+                        GameManager.Instance.Score += 3;
+                    } else {
                         hm = HitOrMiss.Okay;
+                        GameManager.Instance.Score += 1;
+                    }
                 }
                 else {
                     if (offBy > -perfectWindow) {
                         hm = HitOrMiss.Late;
-                        Debug.Log("missed");
                     }
                 }
                 // Debug.Log($"Target Time: {targetTime} || Input time: {currentTime} ||  OffBy: {offBy} || Hit or Miss: {hm}", gameObject);
@@ -83,7 +101,7 @@ public class BeatLine : MonoBehaviour
                 IsCheckingInput = false;
                 FadeOut(hm);
             }
-        }
+        // }
     }
 
     #region Animations
@@ -93,8 +111,9 @@ public class BeatLine : MonoBehaviour
     IEnumerator FadeOutRoutine(HitOrMiss hm) {
         noteSprite.color = Color.blue;
         float t = 0.0f;
-        while (t < 1.0f) {
+        while (t < 0.5f) {
             t += Time.deltaTime;
+            transform.position += movementSpeed;
             noteSprite.color = Color.Lerp(Color.blue, Color.clear, t);
             yield return null;
         }

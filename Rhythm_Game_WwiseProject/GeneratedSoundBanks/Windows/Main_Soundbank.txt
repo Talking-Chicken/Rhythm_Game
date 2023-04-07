@@ -1,8 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1256202815	Play			\Default Work Unit\Play	
-	3991942870	Music			\Default Work Unit\Music	
+	3168847875	Play_01			\Default Work Unit\Play_01	
+	3474269109	Play_Jazz			\Default Work Unit\Play_Jazz	
+
+Effect plug-ins	ID	Name	Type				Notes
+	484763476	New_Pitch_Shifter_01	Wwise Pitch Shifter			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	627134216	Cyberpunk Moonlight Sonata	F:\NYU homework\Music And Gameplay\Rhythm_Game\Rhythm_Game_WwiseProject\.cache\Windows\SFX\Cyberpunk Moonlight Sonata_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Cyberpunk Moonlight Sonata		20593248
-	810316031	Drum	F:\NYU homework\Music And Gameplay\Rhythm_Game\Rhythm_Game_WwiseProject\.cache\Windows\SFX\Drum 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Drum		96084
+	466303923	Jazz	F:\NYU homework\Music And Gameplay\Rhythm_Game\Rhythm_Game_WwiseProject\.cache\Windows\SFX\jazz_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Jazz Music\Jazz		18113880
+	596611787	Drum_01	F:\NYU homework\Music And Gameplay\Rhythm_Game\Rhythm_Game_WwiseProject\.cache\Windows\SFX\kick drum sound_12B999A3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Drum_01		63856
+	997365067	Drum	F:\NYU homework\Music And Gameplay\Rhythm_Game\Rhythm_Game_WwiseProject\.cache\Windows\SFX\Drum 1_57BB9926.wem		\Actor-Mixer Hierarchy\Default Work Unit\Drum		96084
 

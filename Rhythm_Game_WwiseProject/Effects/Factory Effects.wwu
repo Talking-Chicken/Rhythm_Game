@@ -1728,6 +1728,11 @@
 								<Property Name="Voice2Pitch" Type="Real32" Value="100"/>
 							</PropertyList>
 						</Effect>
+						<Effect Name="New_Harmonizer" ID="{2CF097ED-4134-43CA-95C2-9FDA466EB3A1}" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
+							<PropertyList>
+								<Property Name="Voice1Pitch" Type="Real32" Value="10"/>
+							</PropertyList>
+						</Effect>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Stereo Delay" ID="{F3D9A55C-379D-4D15-82C8-FFB9B0C1E8C8}" ShortID="352473335">
@@ -1978,6 +1983,16 @@
 									<PropertyList>
 										<Property Name="Input" Type="int32" Value="1"/>
 										<Property Name="Pitch" Type="Real32" Value="-500"/>
+									</PropertyList>
+								</Effect>
+								<Effect Name="New_Pitch_Shifter" ID="{2473A57C-B32D-4734-9556-C96C91B1260D}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+									<PropertyList>
+										<Property Name="Pitch" Type="Real32" Value="1000"/>
+									</PropertyList>
+								</Effect>
+								<Effect Name="New_Pitch_Shifter_01" ID="{AD54D67A-1DC9-4263-83AB-0883FC6DC703}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+									<PropertyList>
+										<Property Name="Pitch" Type="Real32" Value="10"/>
 									</PropertyList>
 								</Effect>
 							</ChildrenList>

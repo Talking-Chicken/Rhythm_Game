@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F56A610C-C7C4-F874-B68B-7ADDF94EBB7A}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C1FA917D-66CD-E85D-9CB1-A28C651901C1}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -22,10 +22,51 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{1CDD4BCB-844F-134C-500B-F77E425889C3}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{FF483398-F251-C5CA-9CFC-76BB13E74904}">
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
+			<Media>
+				<File Id="466303923" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jazz.wav</ShortName>
+					<CachePath>SFX/jazz_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="596611787" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>kick drum sound.wav</ShortName>
+					<CachePath>SFX/kick drum sound_12B999A3.wem</CachePath>
+				</File>
+				<File Id="997365067" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Drum 1.wav</ShortName>
+					<CachePath>SFX/Drum 1_57BB9926.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="484763476" Name="New_Pitch_Shifter_01" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="1256202815" Name="Play" DurationType="OneShot" DurationMin="0.5435147" DurationMax="0.5435147">
+					<MediaRefs>
+						<MediaRef Id="997365067"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3168847875" Name="Play_01" DurationType="OneShot" DurationMin="0.3614551" DurationMax="0.3614551">
+					<MediaRefs>
+						<MediaRef Id="596611787"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="484763476"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3474269109" Name="Play_Jazz" DurationType="OneShot" DurationMin="47.720707" DurationMax="47.720707">
+					<MediaRefs>
+						<MediaRef Id="466303923"/>
+					</MediaRefs>
+				</Event>
+			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AD4E83EB-EB68-9831-B7B6-E1499B5EAE32}</FileHash>
+	<FileHash>{1AF41F61-5CBE-2CF8-AC97-8E149305A62C}</FileHash>
 </SoundBanksInfo>

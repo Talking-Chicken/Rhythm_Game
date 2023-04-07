@@ -16,4 +16,16 @@ public class TriggerLine : MonoBehaviour
             }
         }
     }
+
+    void OntriggerExit2D(Collider2D collider) {
+        if (isCheckingNote) {
+            if (collider.GetComponent<NoteCircle>() != null) {
+                collider.GetComponent<NoteCircle>().IsCheckingInput = false;
+            }
+        } else {
+            if (collider.GetComponent<BeatLine>() != null) {
+                collider.GetComponent<BeatLine>().IsCheckingInput = false;
+            }
+        }
+    }
 }

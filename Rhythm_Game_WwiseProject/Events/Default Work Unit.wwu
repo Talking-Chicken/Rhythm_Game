@@ -14,12 +14,23 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Music" ID="{CBD331EB-D6D5-4108-BDD0-E0958303F61C}">
+				<Event Name="Play_Jazz" ID="{A0A0D9CA-71BC-4577-B097-5D7F3C250096}">
 					<ChildrenList>
-						<Action Name="" ID="{A10652DD-E9DB-43FC-9D00-888B83C2C500}" ShortID="981064534">
+						<Action Name="" ID="{A1C58A4F-2CBF-494D-8306-0ECF327E984C}" ShortID="537725982">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Music" ID="{118818B4-43F9-4F2C-8550-D317031378F7}" WorkUnitID="{32D1678A-4FBA-45FD-A2A2-FA954C31AEF6}"/>
+									<ObjectRef Name="Jazz Music" ID="{4F82E876-8C3B-4D9A-8843-C1BC8B8BF6B5}" WorkUnitID="{32D1678A-4FBA-45FD-A2A2-FA954C31AEF6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_01" ID="{F0F4A151-E90B-47B8-89FA-348E14127507}">
+					<ChildrenList>
+						<Action Name="" ID="{1A9A42E3-9DCA-4D9C-89C1-9459A650D503}" ShortID="479748465">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Drum_01" ID="{E3BCA3A3-B96D-4FAF-9DDA-D27408E85A8F}" WorkUnitID="{1F3E7601-EE46-4419-9A9F-3CCA725E9801}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

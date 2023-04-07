@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{986487A9-2683-E47A-8688-3D0FE6FDB954}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1B7F800F-5EDF-986D-1B09-0929E6989B5E}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -22,32 +22,51 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{C0243C53-D142-C750-70B5-F86A798C838A}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{FF483398-F251-C5CA-9CFC-76BB13E74904}">
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
 			<Media>
-				<File Id="627134216" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Cyberpunk Moonlight Sonata.wav</ShortName>
-					<CachePath>SFX/Cyberpunk Moonlight Sonata_D79FB2B7.wem</CachePath>
+				<File Id="466303923" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jazz.wav</ShortName>
+					<CachePath>SFX/jazz_D79FB2B7.wem</CachePath>
 				</File>
-				<File Id="810316031" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="596611787" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>kick drum sound.wav</ShortName>
+					<CachePath>SFX/kick drum sound_12B999A3.wem</CachePath>
+				</File>
+				<File Id="997365067" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Drum 1.wav</ShortName>
-					<CachePath>SFX/Drum 1_10C4C929.wem</CachePath>
+					<CachePath>SFX/Drum 1_57BB9926.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="484763476" Name="New_Pitch_Shifter_01" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
-				<Event Id="3991942870" Name="Music" DurationType="OneShot" DurationMin="116.74123" DurationMax="116.74123">
-					<MediaRefs>
-						<MediaRef Id="627134216"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="1256202815" Name="Play" DurationType="OneShot" DurationMin="0.5435147" DurationMax="0.5435147">
 					<MediaRefs>
-						<MediaRef Id="810316031"/>
+						<MediaRef Id="997365067"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3168847875" Name="Play_01" DurationType="OneShot" DurationMin="0.3614551" DurationMax="0.3614551">
+					<MediaRefs>
+						<MediaRef Id="596611787"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="484763476"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3474269109" Name="Play_Jazz" DurationType="OneShot" DurationMin="47.720707" DurationMax="47.720707">
+					<MediaRefs>
+						<MediaRef Id="466303923"/>
 					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FD238AA4-C236-F6B7-5FBE-7142ABDC4441}</FileHash>
+	<FileHash>{6243DC55-8053-BFFF-7965-DB48A352791C}</FileHash>
 </SoundBanksInfo>

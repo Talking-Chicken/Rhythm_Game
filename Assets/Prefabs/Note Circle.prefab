@@ -99,6 +99,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722f79c678790764c92d1bff0aeb763b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drumEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0c1a970bcf9bb7144935278e3fcab4f3, type: 2}
+  endDrumEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dc4939c35ba1a924f969a52e1ac2922a, type: 2}
   successColors:
   - {r: 0, g: 1, b: 0.18417382, a: 1}
   - {r: 1, g: 0.8440197, b: 0.44025153, a: 1}
@@ -108,8 +116,8 @@ MonoBehaviour:
   perfectWindow: 100
   goodWindow: 250
   okayWindow: 500
-  destination: {x: 6, y: 0}
-  startPosition: {x: -6, y: 0}
+  destination: {x: 5, y: 0}
+  startPosition: {x: -5, y: 0}
 --- !u!58 &8359720137074619316
 CircleCollider2D:
   m_ObjectHideFlags: 0

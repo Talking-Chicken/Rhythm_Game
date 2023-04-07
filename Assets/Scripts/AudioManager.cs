@@ -19,6 +19,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] BeatLine beatLinePrefab;
     [SerializeField] Transform startPosition;
 
+    public AkMusicSyncCallbackInfo MusicInfo;
+
     private bool isMakingNote = false;
     public float BeatDuration {
         get { return beatDuration; }
@@ -41,17 +43,19 @@ public class AudioManager : MonoBehaviour
 
         if (in_info is AkMusicSyncCallbackInfo) {
             musicInfo = (AkMusicSyncCallbackInfo)in_info;
+            MusicInfo = musicInfo;
             switch (in_type) {
 
                 case AkCallbackType.AK_MusicSyncUserCue:
                     CreateBeatLine(musicInfo);
-                    if (IsMakingNote) {
-                        CreateCircleNote(musicInfo);
-                        IsMakingNote = false;
-                    }
+                    // if (IsMakingNote) {
+                    //     CreateCircleNote(musicInfo);
+                    //     IsMakingNote = false;
+                    // }
                     break;
 
                 case AkCallbackType.AK_MusicSyncBeat:
+                    GameManager.Instance.IsLeftTurn = !GameManager.Instance.IsLeftTurn;
                     break;
                 case AkCallbackType.AK_MusicSyncBar:
                     break;
@@ -76,12 +80,12 @@ public class AudioManager : MonoBehaviour
 
     #region Letter Spawning
 
-    void CreateCircleNote(AkMusicSyncCallbackInfo info) {
+    public void CreateCircleNote(AkMusicSyncCallbackInfo info) {
         // Debug.Log($"Choosing letter {info}");
 
         NoteCircle pt = Instantiate(noteCirclePrefab, startPosition.position, Quaternion.identity);
 
-        float multiplier = 1.0f;
+        float multiplier = 4.0f;
         if (info.userCueName == "2") {
             multiplier = 2.0f;
         }
@@ -97,7 +101,7 @@ public class AudioManager : MonoBehaviour
     void CreateBeatLine(AkMusicSyncCallbackInfo info) {
         BeatLine pt = Instantiate(beatLinePrefab, new Vector2(-9,0), Quaternion.identity);
 
-        float multiplier = 1.0f;
+        float multiplier = 4.0f;
         if (info.userCueName == "2") {
             multiplier = 2.0f;
         }

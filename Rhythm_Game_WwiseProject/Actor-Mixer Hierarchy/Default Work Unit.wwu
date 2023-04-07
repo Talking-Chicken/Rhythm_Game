@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{1F3E7601-EE46-4419-9A9F-3CCA725E9801}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="Drum" ID="{4EF7A17E-637F-41E6-B0B8-61E83D69D1BF}" ShortID="792863770">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FFEEE8F0-40E3-47DF-9379-556C06BF447B}"/>
@@ -14,15 +21,63 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Drum 1" ID="{29629102-991F-49B1-85FD-2D84A2A4FB89}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.163829290032374"/>
+								<Property Name="LoopBegin" Type="Real64" Value="0"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Drum 1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="997365067"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Drum 1" ID="{29629102-991F-49B1-85FD-2D84A2A4FB89}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Drum_01" ID="{E3BCA3A3-B96D-4FAF-9DDA-D27408E85A8F}" ShortID="666330157">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FFEEE8F0-40E3-47DF-9379-556C06BF447B}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+							<ObjectRef Name="New_Pitch_Shifter_01" ID="{AD54D67A-1DC9-4263-83AB-0883FC6DC703}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{29C6C42D-6FA9-4111-988F-410867F8BE69}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Drum 1" ID="{DFA664B5-0B35-4610-A03D-5DCEB4B6ECED}">
 							<Language>SFX</Language>
 							<AudioFile>Drum 1.wav</AudioFile>
 							<MediaIDList>
 								<MediaID ID="810316031"/>
 							</MediaIDList>
 						</AudioFileSource>
+						<AudioFileSource Name="kick drum sound" ID="{105E1E7C-E0F5-45CE-B9C0-F931E9D7B214}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.361455099645493"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>kick drum sound.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="596611787"/>
+							</MediaIDList>
+						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Drum 1" ID="{29629102-991F-49B1-85FD-2D84A2A4FB89}" Platform="Linked"/>
+						<ActiveSource Name="kick drum sound" ID="{105E1E7C-E0F5-45CE-B9C0-F931E9D7B214}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>
