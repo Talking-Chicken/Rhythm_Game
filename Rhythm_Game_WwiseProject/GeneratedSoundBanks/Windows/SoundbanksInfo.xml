@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{FF483398-F251-C5CA-9CFC-76BB13E74904}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{672F7F44-D202-1B6D-E545-A3CDF6139211}">
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
 			<Media>
@@ -32,11 +32,11 @@
 				</File>
 				<File Id="596611787" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>kick drum sound.wav</ShortName>
-					<CachePath>SFX/kick drum sound_12B999A3.wem</CachePath>
+					<CachePath>SFX/kick drum sound_66C6DAFA.wem</CachePath>
 				</File>
 				<File Id="997365067" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Drum 1.wav</ShortName>
-					<CachePath>SFX/Drum 1_57BB9926.wem</CachePath>
+					<CachePath>SFX/Drum 1_DD8F57EA.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -68,5 +68,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6243DC55-8053-BFFF-7965-DB48A352791C}</FileHash>
+	<FileHash>{6608D9B3-E1DB-8B2B-1CAE-565B5D6F4125}</FileHash>
 </SoundBanksInfo>
